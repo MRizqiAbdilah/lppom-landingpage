@@ -78,6 +78,201 @@ internalLinks.forEach((link) => {
   });
 });
 
+const galleryCarousel = document.querySelector("[data-gallery-carousel]");
+
+if (galleryCarousel) {
+  const galleryViewport = galleryCarousel.querySelector("[data-gallery-viewport]");
+  const galleryTrack = galleryCarousel.querySelector("[data-gallery-track]");
+  const galleryPrev = galleryCarousel.querySelector("[data-gallery-prev]");
+  const galleryNext = galleryCarousel.querySelector("[data-gallery-next]");
+  const galleryDots = Array.from(
+    galleryCarousel.querySelectorAll("[data-gallery-dot]"),
+  );
+  const totalSlides = galleryDots.length;
+  let activeSlide = 0;
+  let dragStartX = 0;
+  let currentDragOffset = 0;
+  let isDragging = false;
+  let hasDragged = false;
+
+  const renderGallerySlide = (withTransition = true) => {
+    if (!galleryTrack) return;
+
+    galleryTrack.style.transitionDuration = withTransition ? "500ms" : "0ms";
+    galleryTrack.style.transform = `translateX(calc(-${activeSlide * 100}% + ${currentDragOffset}px))`;
+
+    galleryDots.forEach((dot, index) => {
+      const isActive = index === activeSlide;
+
+      dot.classList.toggle("bg-brand-600", isActive);
+      dot.classList.toggle("bg-brand-200", !isActive);
+      dot.setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  };
+
+  const goToSlide = (nextSlide) => {
+    activeSlide = (nextSlide + totalSlides) % totalSlides;
+    currentDragOffset = 0;
+    renderGallerySlide(true);
+  };
+
+  const handleDragStart = (clientX) => {
+    if (!galleryViewport) return;
+
+    isDragging = true;
+    hasDragged = false;
+    dragStartX = clientX;
+    currentDragOffset = 0;
+    galleryViewport.classList.add("cursor-grabbing");
+    renderGallerySlide(false);
+  };
+
+  const handleDragMove = (clientX) => {
+    if (!isDragging) return;
+
+    currentDragOffset = clientX - dragStartX;
+    hasDragged = hasDragged || Math.abs(currentDragOffset) > 6;
+    renderGallerySlide(false);
+  };
+
+  const handleDragEnd = () => {
+    if (!isDragging || !galleryViewport) return;
+
+    const dragThreshold = 90;
+
+    if (currentDragOffset <= -dragThreshold) {
+      activeSlide = (activeSlide + 1) % totalSlides;
+    } else if (currentDragOffset >= dragThreshold) {
+      activeSlide = (activeSlide - 1 + totalSlides) % totalSlides;
+    }
+
+    isDragging = false;
+    currentDragOffset = 0;
+    galleryViewport.classList.remove("cursor-grabbing");
+    galleryViewport.dataset.dragging = hasDragged ? "true" : "false";
+    renderGallerySlide(true);
+
+    window.setTimeout(() => {
+      if (galleryViewport) {
+        galleryViewport.dataset.dragging = "false";
+      }
+    }, 120);
+  };
+
+  galleryPrev?.addEventListener("click", () => goToSlide(activeSlide - 1));
+  galleryNext?.addEventListener("click", () => goToSlide(activeSlide + 1));
+
+  galleryDots.forEach((dot, index) => {
+    dot.addEventListener("click", () => goToSlide(index));
+  });
+
+  galleryViewport?.addEventListener("mousedown", (event) => {
+    handleDragStart(event.clientX);
+  });
+
+  galleryViewport?.addEventListener("mousemove", (event) => {
+    handleDragMove(event.clientX);
+  });
+
+  galleryViewport?.addEventListener("mouseup", handleDragEnd);
+  galleryViewport?.addEventListener("mouseleave", handleDragEnd);
+
+  galleryViewport?.addEventListener("touchstart", (event) => {
+    handleDragStart(event.touches[0].clientX);
+  }, { passive: true });
+
+  galleryViewport?.addEventListener("touchmove", (event) => {
+    handleDragMove(event.touches[0].clientX);
+  }, { passive: true });
+
+  galleryViewport?.addEventListener("touchend", handleDragEnd);
+
+  renderGallerySlide();
+}
+
+const galleryItems = Array.from(document.querySelectorAll("[data-gallery-item]"));
+const galleryLightbox = document.querySelector("[data-gallery-lightbox]");
+
+if (galleryItems.length > 0 && galleryLightbox) {
+  const galleryLightboxImage = galleryLightbox.querySelector(
+    "[data-gallery-lightbox-image]",
+  );
+  const galleryClose = galleryLightbox.querySelector("[data-gallery-close]");
+  const galleryPrev = galleryLightbox.querySelector(
+    "[data-gallery-lightbox-prev]",
+  );
+  const galleryNext = galleryLightbox.querySelector(
+    "[data-gallery-lightbox-next]",
+  );
+  let activeGalleryIndex = 0;
+
+  const renderLightboxImage = () => {
+    const activeItem = galleryItems[activeGalleryIndex];
+    const image = activeItem?.querySelector("img");
+
+    if (!galleryLightboxImage || !image) return;
+
+    galleryLightboxImage.src = activeItem.dataset.gallerySrc || image.src;
+    galleryLightboxImage.alt = image.alt || "Preview galeri pelaku usaha";
+  };
+
+  const openLightbox = (index) => {
+    activeGalleryIndex = index;
+    renderLightboxImage();
+    galleryLightbox.classList.remove("pointer-events-none", "opacity-0");
+    galleryLightbox.classList.add("opacity-100");
+    document.body.classList.add("overflow-hidden");
+    galleryLightbox.setAttribute("aria-hidden", "false");
+  };
+
+  const closeLightbox = () => {
+    galleryLightbox.classList.add("pointer-events-none", "opacity-0");
+    galleryLightbox.classList.remove("opacity-100");
+    document.body.classList.remove("overflow-hidden");
+    galleryLightbox.setAttribute("aria-hidden", "true");
+  };
+
+  const showPreviousImage = () => {
+    activeGalleryIndex =
+      (activeGalleryIndex - 1 + galleryItems.length) % galleryItems.length;
+    renderLightboxImage();
+  };
+
+  const showNextImage = () => {
+    activeGalleryIndex = (activeGalleryIndex + 1) % galleryItems.length;
+    renderLightboxImage();
+  };
+
+  galleryItems.forEach((item, index) => {
+    item.addEventListener("click", (event) => {
+      const viewport = event.currentTarget.closest("[data-gallery-viewport]");
+
+      if (viewport?.dataset.dragging === "true") return;
+
+      openLightbox(index);
+    });
+    item.addEventListener("dragstart", (event) => event.preventDefault());
+  });
+
+  galleryClose?.addEventListener("click", closeLightbox);
+  galleryPrev?.addEventListener("click", showPreviousImage);
+  galleryNext?.addEventListener("click", showNextImage);
+
+  galleryLightbox.addEventListener("click", (event) => {
+    if (event.target === galleryLightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (galleryLightbox.getAttribute("aria-hidden") === "true") return;
+
+    if (event.key === "Escape") closeLightbox();
+    if (event.key === "ArrowLeft") showPreviousImage();
+    if (event.key === "ArrowRight") showNextImage();
+  });
+}
+
 const marqueeTracks = document.querySelectorAll("[data-marquee-id]");
 const marqueeStoragePrefix = "lppom-marquee-progress:";
 let marqueeSaveTimer = null;
