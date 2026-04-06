@@ -54,3 +54,132 @@ details.forEach((item) => {
     });
   });
 });
+
+const internalLinks = document.querySelectorAll('a[href^="#"]');
+
+internalLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const targetId = link.getAttribute("href");
+
+    if (!targetId || targetId === "#") return;
+
+    const targetElement = document.querySelector(targetId);
+
+    if (!targetElement) return;
+
+    event.preventDefault();
+
+    targetElement.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    window.history.pushState(null, "", targetId);
+  });
+});
+
+const marqueeTracks = document.querySelectorAll("[data-marquee-id]");
+const marqueeStoragePrefix = "lppom-marquee-progress:";
+let marqueeSaveTimer = null;
+
+const parseAnimationTimeToMs = (value) => {
+  if (!value) return 0;
+
+  const trimmed = value.trim();
+
+  if (trimmed.endsWith("ms")) {
+    return Number.parseFloat(trimmed);
+  }
+
+  if (trimmed.endsWith("s")) {
+    return Number.parseFloat(trimmed) * 1000;
+  }
+
+  return Number.parseFloat(trimmed) || 0;
+};
+
+const getPrimaryAnimationDuration = (element) => {
+  const durationValue = getComputedStyle(element).animationDuration.split(",")[0];
+  return parseAnimationTimeToMs(durationValue);
+};
+
+const getCurrentAnimationTime = (element, durationMs) => {
+  const animation = element
+    .getAnimations()
+    .find((item) => typeof item.currentTime === "number");
+
+  if (animation && durationMs > 0) {
+    return ((animation.currentTime % durationMs) + durationMs) % durationMs;
+  }
+
+  const delayValue = getComputedStyle(element).animationDelay.split(",")[0];
+  const delayMs = parseAnimationTimeToMs(delayValue);
+
+  if (durationMs > 0) {
+    return ((-delayMs % durationMs) + durationMs) % durationMs;
+  }
+
+  return 0;
+};
+
+const saveMarqueeProgress = () => {
+  marqueeTracks.forEach((track) => {
+    const trackId = track.dataset.marqueeId;
+    const durationMs = getPrimaryAnimationDuration(track);
+
+    if (!trackId || durationMs <= 0) return;
+
+    const currentTimeMs = getCurrentAnimationTime(track, durationMs);
+
+    localStorage.setItem(
+      `${marqueeStoragePrefix}${trackId}`,
+      JSON.stringify({
+        currentTimeMs,
+        durationMs,
+      }),
+    );
+  });
+};
+
+const restoreMarqueeProgress = () => {
+  marqueeTracks.forEach((track) => {
+    const trackId = track.dataset.marqueeId;
+    const durationMs = getPrimaryAnimationDuration(track);
+
+    if (!trackId || durationMs <= 0) return;
+
+    const savedValue = localStorage.getItem(`${marqueeStoragePrefix}${trackId}`);
+
+    if (!savedValue) return;
+
+    try {
+      const parsedValue = JSON.parse(savedValue);
+      const savedDurationMs = Number(parsedValue.durationMs) || durationMs;
+      const savedTimeMs = Number(parsedValue.currentTimeMs) || 0;
+      const normalizedTimeMs =
+        ((savedTimeMs % savedDurationMs) + savedDurationMs) % savedDurationMs;
+
+      track.style.animationDelay = `-${normalizedTimeMs}ms`;
+    } catch (error) {
+      localStorage.removeItem(`${marqueeStoragePrefix}${trackId}`);
+    }
+  });
+};
+
+try {
+  restoreMarqueeProgress();
+
+  if (marqueeTracks.length > 0) {
+    marqueeSaveTimer = window.setInterval(saveMarqueeProgress, 1000);
+    window.addEventListener("pagehide", saveMarqueeProgress);
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden") {
+        saveMarqueeProgress();
+      }
+    });
+  }
+} catch (error) {
+  if (marqueeSaveTimer) {
+    window.clearInterval(marqueeSaveTimer);
+  }
+}

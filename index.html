@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -66,9 +66,13 @@
       };
     </script>
   </head>
-  <body class="font-sans antialiased text-[#163020] [scroll-behavior:smooth] [background:radial-gradient(circle_at_top_left,rgba(127,215,162,0.18),transparent_28%),radial-gradient(circle_at_top_right,rgba(35,152,90,0.16),transparent_25%),linear-gradient(180deg,#f7fbf8_0%,#ffffff_32%,#f0f8f3_100%)]">
+  <body
+    class="font-sans antialiased text-[#163020] [background:radial-gradient(circle_at_top_left,rgba(127,215,162,0.18),transparent_28%),radial-gradient(circle_at_top_right,rgba(35,152,90,0.16),transparent_25%),linear-gradient(180deg,#f7fbf8_0%,#ffffff_32%,#f0f8f3_100%)]"
+  >
     <div class="relative overflow-hidden">
-      <div class="pointer-events-none absolute inset-0 before:absolute before:inset-0 before:content-[''] before:bg-[linear-gradient(rgba(17,74,47,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(17,74,47,0.06)_1px,transparent_1px)] before:bg-[size:44px_44px] before:[mask-image:linear-gradient(180deg,rgba(0,0,0,0.85),transparent)]"></div>
+      <div
+        class="pointer-events-none absolute inset-0 before:absolute before:inset-0 before:content-[''] before:bg-[linear-gradient(rgba(17,74,47,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(17,74,47,0.06)_1px,transparent_1px)] before:bg-[size:44px_44px] before:[mask-image:linear-gradient(180deg,rgba(0,0,0,0.85),transparent)]"
+      ></div>
       <div
         class="absolute -left-20 top-28 h-64 w-64 animate-drift rounded-full bg-brand-200/40 blur-3xl"
       ></div>
@@ -78,44 +82,31 @@
 
       <header class="relative z-10">
         <div
-          class="mx-auto mt-4 flex max-w-7xl items-center justify-between rounded-full bg-[linear-gradient(180deg,rgba(255,255,255,0.76),rgba(255,255,255,0.58))] px-6 py-4 shadow-[0_18px_60px_rgba(12,47,31,0.08)] backdrop-blur-[20px] lg:px-8"
+          class="mx-auto mt-12 flex max-w-7xl items-center justify-between rounded-full lg:px-8"
         >
           <a href="#top" class="flex items-center gap-3">
-            <div
+            <!-- <div
               class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-700 text-white shadow-lg shadow-brand-700/20"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                class="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-              >
-                <path
-                  d="M12 3l7 4v5c0 4.4-2.9 8.5-7 9-4.1-.5-7-4.6-7-9V7l7-4Z"
-                />
-                <path d="m9.5 12 1.8 1.8 3.4-3.6" />
-              </svg>
-            </div>
-            <div>
+            > -->
+              <img src="logo-lppom.svg" alt="logo lppomjakarta" width="180" height="40">
+            <!-- </div> -->
+            <!-- <div>
               <p
                 class="font-display text-lg font-bold tracking-tight text-brand-900"
               >
                 LPPOM Jakarta
               </p>
-              <p class="text-sm text-brand-700/80">
-                Lembaga Pemeriksa Halal
-              </p>
-            </div>
+              <p class="text-sm text-brand-700/80">Lembaga Pemeriksa Halal</p>
+            </div> -->
           </a>
 
           <nav
             class="hidden items-center gap-8 text-sm font-medium text-brand-900/80 lg:flex"
           >
-            <a href="#manfaat" class="transition hover:text-brand-600"
-              >Manfaat</a
+            <a href="#layanan" class="transition hover:text-brand-600"
+              >Layanan</a
             >
-            <a href="#proses" class="transition hover:text-brand-600">Proses</a>
+            <a href="#partnership" class="transition hover:text-brand-600">Partnership</a>
             <a href="#faq" class="transition hover:text-brand-600">FAQ</a>
             <a
               href="https://wa.me/628139516822?text=Halo%20LPPOM%20Jakarta%2C%20saya%20ingin%20konsultasi%20sertifikasi%20halal."
@@ -132,7 +123,9 @@
         <section
           class="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-10 lg:grid-cols-[1.02fr_.98fr] lg:px-8 lg:pb-24 lg:pt-16"
         >
-          <div class="reveal translate-y-6 opacity-0 transition duration-700 ease-out">
+          <div
+            class="reveal translate-y-6 opacity-0 transition duration-700 ease-out"
+          >
             <div
               class="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white/90 px-4 py-2 text-sm font-semibold text-brand-700 shadow-sm"
             >
@@ -192,7 +185,6 @@
                 Lihat Kenapa Ini Penting
               </a>
             </div>
-
           </div>
           <div
             data-reveal
@@ -258,27 +250,46 @@
 
             <div class="mt-8 space-y-4">
               <div class="relative overflow-hidden">
-                <div class="pointer-events-none absolute inset-y-0 left-0 z-[2] w-7 bg-[linear-gradient(90deg,#f7fbf8_0%,rgba(247,251,248,0)_100%)] sm:w-[72px]"></div>
-                <div class="pointer-events-none absolute inset-y-0 right-0 z-[2] w-7 bg-[linear-gradient(270deg,#f7fbf8_0%,rgba(247,251,248,0)_100%)] sm:w-[72px]"></div>
-                <div class="logo-track flex w-max gap-4 animate-marquee-left hover:[animation-play-state:paused] [&_.logo-pill]:flex [&_.logo-pill]:h-[76px] [&_.logo-pill]:min-w-[132px] [&_.logo-pill]:items-center [&_.logo-pill]:justify-center [&_.logo-pill]:rounded-[1.15rem] [&_.logo-pill]:border [&_.logo-pill]:border-[rgba(219,239,227,0.95)] [&_.logo-pill]:bg-white/90 [&_.logo-pill]:px-4 [&_.logo-pill]:py-[0.85rem] [&_.logo-pill]:shadow-[0_14px_32px_rgba(11,41,26,0.08)] [&_.logo-pill_img]:max-h-[38px] [&_.logo-pill_img]:w-auto [&_.logo-pill_img]:max-w-[100px] [&_.logo-pill_img]:object-contain [&_.logo-pill_img]:[filter:saturate(1.02)_contrast(1.01)] sm:[&_.logo-pill]:h-[92px] sm:[&_.logo-pill]:min-w-[180px] sm:[&_.logo-pill]:rounded-3xl sm:[&_.logo-pill]:px-5 sm:[&_.logo-pill]:py-4 sm:[&_.logo-pill_img]:max-h-[50px] sm:[&_.logo-pill_img]:max-w-[140px]">
-                  <div class="flex h-[76px] min-w-[132px] items-center justify-center rounded-[1.15rem] border border-[rgba(219,239,227,0.95)] bg-white/90 px-4 py-[0.85rem] shadow-[0_14px_32px_rgba(11,41,26,0.08)] sm:h-[92px] sm:min-w-[180px] sm:rounded-3xl sm:px-5 sm:py-4">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 z-[2] w-7 bg-[linear-gradient(90deg,#f7fbf8_0%,rgba(247,251,248,0)_100%)] sm:w-[72px]"
+                ></div>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 z-[2] w-7 bg-[linear-gradient(270deg,#f7fbf8_0%,rgba(247,251,248,0)_100%)] sm:w-[72px]"
+                ></div>
+                <div
+                  data-marquee-id="trusted-businesses-row-1"
+                  class="logo-track flex w-max gap-4 animate-marquee-left hover:[animation-play-state:paused] [&_.logo-pill]:flex [&_.logo-pill]:h-[76px] [&_.logo-pill]:min-w-[132px] [&_.logo-pill]:items-center [&_.logo-pill]:justify-center [&_.logo-pill]:rounded-[1.15rem] [&_.logo-pill]:border [&_.logo-pill]:border-[rgba(219,239,227,0.95)] [&_.logo-pill]:bg-white/90 [&_.logo-pill]:px-4 [&_.logo-pill]:py-[0.85rem] [&_.logo-pill]:shadow-[0_14px_32px_rgba(11,41,26,0.08)] [&_.logo-pill_img]:max-h-[38px] [&_.logo-pill_img]:w-auto [&_.logo-pill_img]:max-w-[100px] [&_.logo-pill_img]:object-contain [&_.logo-pill_img]:[filter:saturate(1.02)_contrast(1.01)] sm:[&_.logo-pill]:h-[92px] sm:[&_.logo-pill]:min-w-[180px] sm:[&_.logo-pill]:rounded-3xl sm:[&_.logo-pill]:px-5 sm:[&_.logo-pill]:py-4 sm:[&_.logo-pill_img]:max-h-[50px] sm:[&_.logo-pill_img]:max-w-[140px]"
+                >
+                  <div
+                    class="flex h-[76px] min-w-[132px] items-center justify-center rounded-[1.15rem] border border-[rgba(219,239,227,0.95)] bg-white/90 px-4 py-[0.85rem] shadow-[0_14px_32px_rgba(11,41,26,0.08)] sm:h-[92px] sm:min-w-[180px] sm:rounded-3xl sm:px-5 sm:py-4"
+                  >
                     <img
                       src="./logo-reguler/CakSuKumis.jpg"
                       alt="Bakso Malang Cak Su Kumis"
                       class="max-h-[38px] w-auto max-w-[100px] object-contain [filter:saturate(1.02)_contrast(1.01)] sm:max-h-[50px] sm:max-w-[140px]"
                     />
                   </div>
-                   <div class="flex h-[76px] min-w-[132px] items-center justify-center rounded-[1.15rem] border border-[rgba(219,239,227,0.95)] bg-white/90 px-4 py-[0.85rem] shadow-[0_14px_32px_rgba(11,41,26,0.08)] sm:h-[92px] sm:min-w-[180px] sm:rounded-3xl sm:px-5 sm:py-4">
+                  <div
+                    class="flex h-[76px] min-w-[132px] items-center justify-center rounded-[1.15rem] border border-[rgba(219,239,227,0.95)] bg-white/90 px-4 py-[0.85rem] shadow-[0_14px_32px_rgba(11,41,26,0.08)] sm:h-[92px] sm:min-w-[180px] sm:rounded-3xl sm:px-5 sm:py-4"
+                  >
                     <img
                       src="./logo-reguler/Mie Ami Nikita Mirzani.png"
                       alt="Mie Ami"
                       class="max-h-[38px] w-auto max-w-[100px] object-contain [filter:saturate(1.02)_contrast(1.01)] sm:max-h-[50px] sm:max-w-[140px]"
                     />
                   </div>
-                  <div class="flex h-[76px] min-w-[132px] items-center justify-center rounded-[1.15rem] border border-[rgba(219,239,227,0.95)] bg-white/90 px-4 py-[0.85rem] shadow-[0_14px_32px_rgba(11,41,26,0.08)] sm:h-[92px] sm:min-w-[180px] sm:rounded-3xl sm:px-5 sm:py-4">
-                    <img src="./logo-reguler/PT. ONDA.jpg" alt="ONDA" class="max-h-[38px] w-auto max-w-[100px] object-contain [filter:saturate(1.02)_contrast(1.01)] sm:max-h-[50px] sm:max-w-[140px]" />
+                  <div
+                    class="flex h-[76px] min-w-[132px] items-center justify-center rounded-[1.15rem] border border-[rgba(219,239,227,0.95)] bg-white/90 px-4 py-[0.85rem] shadow-[0_14px_32px_rgba(11,41,26,0.08)] sm:h-[92px] sm:min-w-[180px] sm:rounded-3xl sm:px-5 sm:py-4"
+                  >
+                    <img
+                      src="./logo-reguler/PT. ONDA.jpg"
+                      alt="ONDA"
+                      class="max-h-[38px] w-auto max-w-[100px] object-contain [filter:saturate(1.02)_contrast(1.01)] sm:max-h-[50px] sm:max-w-[140px]"
+                    />
                   </div>
-                  <div class="flex h-[76px] min-w-[132px] items-center justify-center rounded-[1.15rem] border border-[rgba(219,239,227,0.95)] bg-white/90 px-4 py-[0.85rem] shadow-[0_14px_32px_rgba(11,41,26,0.08)] sm:h-[92px] sm:min-w-[180px] sm:rounded-3xl sm:px-5 sm:py-4">
+                  <div
+                    class="flex h-[76px] min-w-[132px] items-center justify-center rounded-[1.15rem] border border-[rgba(219,239,227,0.95)] bg-white/90 px-4 py-[0.85rem] shadow-[0_14px_32px_rgba(11,41,26,0.08)] sm:h-[92px] sm:min-w-[180px] sm:rounded-3xl sm:px-5 sm:py-4"
+                  >
                     <img
                       src="./logo-reguler/gudeg-mercon-bu-prih-822.jpg"
                       alt="Gudeg Mercon Bu Prih"
@@ -346,9 +357,16 @@
               </div>
 
               <div class="relative overflow-hidden">
-                <div class="pointer-events-none absolute inset-y-0 left-0 z-[2] w-7 bg-[linear-gradient(90deg,#f7fbf8_0%,rgba(247,251,248,0)_100%)] sm:w-[72px]"></div>
-                <div class="pointer-events-none absolute inset-y-0 right-0 z-[2] w-7 bg-[linear-gradient(270deg,#f7fbf8_0%,rgba(247,251,248,0)_100%)] sm:w-[72px]"></div>
-                <div class="logo-track flex w-max gap-4 animate-marquee-right hover:[animation-play-state:paused] [&_.logo-pill]:flex [&_.logo-pill]:h-[76px] [&_.logo-pill]:min-w-[132px] [&_.logo-pill]:items-center [&_.logo-pill]:justify-center [&_.logo-pill]:rounded-[1.15rem] [&_.logo-pill]:border [&_.logo-pill]:border-[rgba(219,239,227,0.95)] [&_.logo-pill]:bg-white/90 [&_.logo-pill]:px-4 [&_.logo-pill]:py-[0.85rem] [&_.logo-pill]:shadow-[0_14px_32px_rgba(11,41,26,0.08)] [&_.logo-pill_img]:max-h-[38px] [&_.logo-pill_img]:w-auto [&_.logo-pill_img]:max-w-[100px] [&_.logo-pill_img]:object-contain [&_.logo-pill_img]:[filter:saturate(1.02)_contrast(1.01)] sm:[&_.logo-pill]:h-[92px] sm:[&_.logo-pill]:min-w-[180px] sm:[&_.logo-pill]:rounded-3xl sm:[&_.logo-pill]:px-5 sm:[&_.logo-pill]:py-4 sm:[&_.logo-pill_img]:max-h-[50px] sm:[&_.logo-pill_img]:max-w-[140px]">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 z-[2] w-7 bg-[linear-gradient(90deg,#f7fbf8_0%,rgba(247,251,248,0)_100%)] sm:w-[72px]"
+                ></div>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 z-[2] w-7 bg-[linear-gradient(270deg,#f7fbf8_0%,rgba(247,251,248,0)_100%)] sm:w-[72px]"
+                ></div>
+                <div
+                  data-marquee-id="trusted-businesses-row-2"
+                  class="logo-track flex w-max gap-4 animate-marquee-right hover:[animation-play-state:paused] [&_.logo-pill]:flex [&_.logo-pill]:h-[76px] [&_.logo-pill]:min-w-[132px] [&_.logo-pill]:items-center [&_.logo-pill]:justify-center [&_.logo-pill]:rounded-[1.15rem] [&_.logo-pill]:border [&_.logo-pill]:border-[rgba(219,239,227,0.95)] [&_.logo-pill]:bg-white/90 [&_.logo-pill]:px-4 [&_.logo-pill]:py-[0.85rem] [&_.logo-pill]:shadow-[0_14px_32px_rgba(11,41,26,0.08)] [&_.logo-pill_img]:max-h-[38px] [&_.logo-pill_img]:w-auto [&_.logo-pill_img]:max-w-[100px] [&_.logo-pill_img]:object-contain [&_.logo-pill_img]:[filter:saturate(1.02)_contrast(1.01)] sm:[&_.logo-pill]:h-[92px] sm:[&_.logo-pill]:min-w-[180px] sm:[&_.logo-pill]:rounded-3xl sm:[&_.logo-pill]:px-5 sm:[&_.logo-pill]:py-4 sm:[&_.logo-pill_img]:max-h-[50px] sm:[&_.logo-pill_img]:max-w-[140px]"
+                >
                   <div class="logo-pill">
                     <img
                       src="./logo-reguler/logo-hotel-gran-mahakam.webp"
@@ -425,9 +443,16 @@
               </div>
 
               <div class="relative overflow-hidden">
-                <div class="pointer-events-none absolute inset-y-0 left-0 z-[2] w-7 bg-[linear-gradient(90deg,#f7fbf8_0%,rgba(247,251,248,0)_100%)] sm:w-[72px]"></div>
-                <div class="pointer-events-none absolute inset-y-0 right-0 z-[2] w-7 bg-[linear-gradient(270deg,#f7fbf8_0%,rgba(247,251,248,0)_100%)] sm:w-[72px]"></div>
-                <div class="logo-track flex w-max gap-4 animate-[marquee-left_34s_linear_infinite] hover:[animation-play-state:paused] [&_.logo-pill]:flex [&_.logo-pill]:h-[76px] [&_.logo-pill]:min-w-[132px] [&_.logo-pill]:items-center [&_.logo-pill]:justify-center [&_.logo-pill]:rounded-[1.15rem] [&_.logo-pill]:border [&_.logo-pill]:border-[rgba(219,239,227,0.95)] [&_.logo-pill]:bg-white/90 [&_.logo-pill]:px-4 [&_.logo-pill]:py-[0.85rem] [&_.logo-pill]:shadow-[0_14px_32px_rgba(11,41,26,0.08)] [&_.logo-pill_img]:max-h-[38px] [&_.logo-pill_img]:w-auto [&_.logo-pill_img]:max-w-[100px] [&_.logo-pill_img]:object-contain [&_.logo-pill_img]:[filter:saturate(1.02)_contrast(1.01)] sm:[&_.logo-pill]:h-[92px] sm:[&_.logo-pill]:min-w-[180px] sm:[&_.logo-pill]:rounded-3xl sm:[&_.logo-pill]:px-5 sm:[&_.logo-pill]:py-4 sm:[&_.logo-pill_img]:max-h-[50px] sm:[&_.logo-pill_img]:max-w-[140px]">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 z-[2] w-7 bg-[linear-gradient(90deg,#f7fbf8_0%,rgba(247,251,248,0)_100%)] sm:w-[72px]"
+                ></div>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 z-[2] w-7 bg-[linear-gradient(270deg,#f7fbf8_0%,rgba(247,251,248,0)_100%)] sm:w-[72px]"
+                ></div>
+                <div
+                  data-marquee-id="trusted-businesses-row-3"
+                  class="logo-track flex w-max gap-4 animate-[marquee-left_34s_linear_infinite] hover:[animation-play-state:paused] [&_.logo-pill]:flex [&_.logo-pill]:h-[76px] [&_.logo-pill]:min-w-[132px] [&_.logo-pill]:items-center [&_.logo-pill]:justify-center [&_.logo-pill]:rounded-[1.15rem] [&_.logo-pill]:border [&_.logo-pill]:border-[rgba(219,239,227,0.95)] [&_.logo-pill]:bg-white/90 [&_.logo-pill]:px-4 [&_.logo-pill]:py-[0.85rem] [&_.logo-pill]:shadow-[0_14px_32px_rgba(11,41,26,0.08)] [&_.logo-pill_img]:max-h-[38px] [&_.logo-pill_img]:w-auto [&_.logo-pill_img]:max-w-[100px] [&_.logo-pill_img]:object-contain [&_.logo-pill_img]:[filter:saturate(1.02)_contrast(1.01)] sm:[&_.logo-pill]:h-[92px] sm:[&_.logo-pill]:min-w-[180px] sm:[&_.logo-pill]:rounded-3xl sm:[&_.logo-pill]:px-5 sm:[&_.logo-pill]:py-4 sm:[&_.logo-pill_img]:max-h-[50px] sm:[&_.logo-pill_img]:max-w-[140px]"
+                >
                   <div class="logo-pill">
                     <img src="./logo-reguler/SHSD LOGO.png" alt="SHSD" />
                   </div>
@@ -496,10 +521,12 @@
 
         <!-- SECTION WAJIB HALAL (Tambahkan Gambar di bawah UU itu) -->
         <section class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-          <div class="reveal translate-y-6 opacity-0 transition duration-700 ease-out">
+          <div
+            class="reveal translate-y-6 opacity-0 transition duration-700 ease-out"
+          >
             <div class="grid gap-8 lg:grid-cols-[.95fr_1.05fr] lg:items-start">
               <div
-                class="flex h-[90vh] flex-col overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_top_right,rgba(127,215,162,0.18),transparent_28%),linear-gradient(180deg,#0d2e1f_0%,#103825_100%)] p-8 text-white shadow-[0_26px_90px_rgba(10,40,25,0.14)] md:p-10"
+                class="flex min-h-[620px] flex-col overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_top_right,rgba(127,215,162,0.18),transparent_28%),linear-gradient(180deg,#0d2e1f_0%,#103825_100%)] p-8 text-white shadow-[0_26px_90px_rgba(10,40,25,0.14)] md:min-h-[680px] md:p-10 lg:h-[760px] lg:min-h-0"
               >
                 <p
                   class="text-sm font-bold uppercase tracking-[0.24em] text-brand-200"
@@ -531,7 +558,9 @@
                   />
                 </div>
               </div>
-              <div class="rounded-[2rem] h-[90vh] border border-white/75 bg-[linear-gradient(135deg,rgba(255,255,255,0.92),rgba(245,252,247,0.82)),linear-gradient(180deg,rgba(255,255,255,0.4),rgba(255,255,255,0))] p-8 shadow-[0_26px_90px_rgba(10,40,25,0.12)] md:p-10">
+              <div
+                class="rounded-[2rem] min-h-[620px] border border-white/75 bg-[linear-gradient(135deg,rgba(255,255,255,0.92),rgba(245,252,247,0.82)),linear-gradient(180deg,rgba(255,255,255,0.4),rgba(255,255,255,0))] p-8 shadow-[0_26px_90px_rgba(10,40,25,0.12)] md:min-h-[680px] md:p-10 lg:h-[760px] lg:min-h-0 lg:overflow-y-auto"
+              >
                 <div class="grid gap-4">
                   <details
                     class="faq-item group reveal translate-y-6 rounded-[1.5rem] border border-[rgba(219,239,227,0.95)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(249,252,250,0.94))] p-6 opacity-0 shadow-[0_18px_50px_rgba(11,41,26,0.08)] transition duration-700 ease-out"
@@ -564,7 +593,7 @@
                     <summary
                       class="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-lg font-bold text-brand-900"
                     >
-                      SPPG - MBG
+                      SPPG - Makanan Bergizi Gratis
                       <span
                         class="rounded-full bg-brand-50 p-2 text-brand-700 transition group-open:rotate-45"
                       >
@@ -580,7 +609,7 @@
                       </span>
                     </summary>
                     <p class="mt-4 text-sm leading-7 text-slate-600">
-                      SPPG - MBG (Satuan Pemenuhan Gizi)
+                      SPPG (Satuan Pelayanan Pemenuhan Gizi)
                     </p>
                   </details>
                   <details
@@ -715,8 +744,10 @@
         </section>
 
         <!-- SECTION MANFAAT (ICON nya harus disesuaikan lagi) -->
-        <section id="manfaat" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <div class="reveal translate-y-6 opacity-0 transition duration-700 ease-out max-w-2xl space-y-4">
+        <section id="layanan" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+          <div
+            class="reveal translate-y-6 opacity-0 transition duration-700 ease-out max-w-2xl space-y-4"
+          >
             <p
               class="text-sm font-bold uppercase tracking-[0.24em] text-brand-600"
             >
@@ -733,17 +764,27 @@
             </p>
           </div>
 
-          <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             <article
-              class="reveal translate-y-6 opacity-0 transition duration-700 ease-out relative flex min-h-[620px] overflow-hidden rounded-[2rem] isolate shadow-[0_28px_72px_rgba(10,40,25,0.14)] before:absolute before:inset-0 before:bg-[image:var(--card-image)] before:bg-cover before:bg-center before:scale-[1.04] before:transition-transform before:duration-[900ms] hover:before:scale-110 after:absolute after:inset-0 after:bg-[radial-gradient(circle_at_50%_18%,rgba(177,233,198,0.08)_0%,rgba(177,233,198,0)_28%),linear-gradient(180deg,rgba(12,47,31,0)_0%,rgba(12,47,31,0.16)_24%,rgba(17,74,47,0.52)_42%,rgba(18,94,57,0.9)_60%,rgba(12,47,31,0.98)_78%,rgba(8,33,21,1)_100%),var(--card-overlay)] max-sm:min-h-[520px]"
+              class="reveal relative flex min-h-[520px] overflow-hidden rounded-[2rem] isolate translate-y-6 opacity-0 shadow-[0_28px_72px_rgba(10,40,25,0.14)] transition duration-700 ease-out before:absolute before:inset-0 before:bg-[image:var(--card-image)] before:bg-cover before:bg-center before:scale-[1.04] before:transition-transform before:duration-[900ms] hover:before:scale-110 after:absolute after:inset-0 after:bg-[radial-gradient(circle_at_50%_18%,rgba(177,233,198,0.08)_0%,rgba(177,233,198,0)_28%),linear-gradient(180deg,rgba(12,47,31,0)_0%,rgba(12,47,31,0.16)_24%,rgba(17,74,47,0.52)_42%,rgba(18,94,57,0.9)_60%,rgba(12,47,31,0.98)_78%,rgba(8,33,21,1)_100%),var(--card-overlay)] sm:min-h-[560px] xl:min-h-[620px]"
               style="
-                --card-image: url('./pendamping.png');
-                --card-overlay: linear-gradient(180deg, rgba(127, 215, 162, 0) 0%, rgba(22, 119, 70, 0.16) 34%, rgba(18, 94, 57, 0.48) 54%, rgba(12, 47, 31, 0.72) 100%);
+                --card-image: url(&quot;./pendamping.png&quot;);
+                --card-overlay: linear-gradient(
+                  180deg,
+                  rgba(127, 215, 162, 0) 0%,
+                  rgba(22, 119, 70, 0.16) 34%,
+                  rgba(18, 94, 57, 0.48) 54%,
+                  rgba(12, 47, 31, 0.72) 100%
+                );
               "
             >
-              <div class="relative z-[1] flex w-full flex-col p-8 text-white max-sm:p-6">
+              <div
+                class="relative z-[1] flex w-full flex-col p-6 text-white sm:p-8"
+              >
                 <div class="flex items-center gap-4">
-                  <div class="flex h-[3.6rem] w-[3.6rem] items-center justify-center rounded-[1.2rem] bg-[rgba(11,41,26,0.32)] text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.18)] backdrop-blur-[14px]">
+                  <div
+                    class="flex h-[3.6rem] w-[3.6rem] items-center justify-center rounded-[1.2rem] bg-[rgba(11,41,26,0.32)] text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.18)] backdrop-blur-[14px]"
+                  >
                     <svg
                       viewBox="0 0 24 24"
                       class="h-7 w-7"
@@ -761,22 +802,35 @@
                       <path d="M8 17h8" />
                     </svg>
                   </div>
-                  <span class="text-[0.8rem] font-extrabold uppercase tracking-[0.24em] text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.35)]">PENDAMPINGAN</span>
+                  <span
+                    class="text-[0.8rem] font-extrabold uppercase tracking-[0.24em] text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.35)]"
+                    >PENDAMPINGAN</span
+                  >
                 </div>
-                <div class="mt-auto flex min-h-[22rem] max-w-sm flex-col justify-end gap-3 pt-[10.5rem] max-sm:min-h-0 max-sm:pt-32">
-                  <h3 class="min-h-[calc(1.08em*4)] font-display text-3xl font-extrabold leading-[1.08] max-sm:min-h-0">
+                <div
+                  class="mt-auto flex max-w-sm flex-col justify-end gap-3 pt-28 sm:pt-32 lg:pt-36"
+                >
+                  <h3
+                    class="font-display text-[1.75rem] font-extrabold leading-[1.08] sm:text-3xl"
+                  >
                     Dilayani oleh tenaga profesional dan berpengalaman
                   </h3>
-                  <div class="min-h-[5.8rem] max-sm:min-h-0">
+                  <div>
                     <p class="text-sm leading-7 text-slate-100/90">
-                      Proses yang terasa rumit kami pecah menjadi langkah yang lebih
-                      jelas, tenang, dan mudah diikuti oleh pelaku usaha.
+                      Proses yang terasa rumit kami pecah menjadi langkah yang
+                      lebih jelas, tenang, dan mudah diikuti oleh pelaku usaha.
                     </p>
                   </div>
                   <ul class="grid gap-[0.65rem] text-slate-100/95">
                     <li class="flex gap-3 text-[0.95rem] leading-[1.6]">
-                      <span class="mt-[0.2rem] flex h-[1.35rem] w-[1.35rem] shrink-0 items-center justify-center rounded-full bg-[rgba(177,233,198,0.22)] text-[#d7f4e1] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]">
-                        <svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="currentColor">
+                      <span
+                        class="mt-[0.2rem] flex h-[1.35rem] w-[1.35rem] shrink-0 items-center justify-center rounded-full bg-[rgba(177,233,198,0.22)] text-[#d7f4e1] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]"
+                      >
+                        <svg
+                          viewBox="0 0 20 20"
+                          class="h-3.5 w-3.5"
+                          fill="currentColor"
+                        >
                           <path
                             fill-rule="evenodd"
                             d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.25 7.313a1 1 0 0 1-1.42-.002l-3.246-3.29a1 1 0 1 1 1.424-1.406l2.535 2.57 6.537-6.593a1 1 0 0 1 1.414-.006Z"
@@ -784,11 +838,20 @@
                           />
                         </svg>
                       </span>
-                      <span>Membantu proses dokumen dan akses pembelajaran e-learning seumur hidup.</span>
+                      <span
+                        >Membantu proses dokumen dan akses pembelajaran
+                        e-learning seumur hidup.</span
+                      >
                     </li>
                     <li class="flex gap-3 text-[0.95rem] leading-[1.6]">
-                      <span class="mt-[0.2rem] flex h-[1.35rem] w-[1.35rem] shrink-0 items-center justify-center rounded-full bg-[rgba(177,233,198,0.22)] text-[#d7f4e1] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]">
-                        <svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="currentColor">
+                      <span
+                        class="mt-[0.2rem] flex h-[1.35rem] w-[1.35rem] shrink-0 items-center justify-center rounded-full bg-[rgba(177,233,198,0.22)] text-[#d7f4e1] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]"
+                      >
+                        <svg
+                          viewBox="0 0 20 20"
+                          class="h-3.5 w-3.5"
+                          fill="currentColor"
+                        >
                           <path
                             fill-rule="evenodd"
                             d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.25 7.313a1 1 0 0 1-1.42-.002l-3.246-3.29a1 1 0 1 1 1.424-1.406l2.535 2.57 6.537-6.593a1 1 0 0 1 1.414-.006Z"
@@ -796,11 +859,20 @@
                           />
                         </svg>
                       </span>
-                      <span>Pendampingan proses pendaftaran ke BPJPH melalui SIHALAL.</span>
+                      <span
+                        >Pendampingan proses pendaftaran ke BPJPH melalui
+                        SIHALAL.</span
+                      >
                     </li>
                     <li class="flex gap-3 text-[0.95rem] leading-[1.6]">
-                      <span class="mt-[0.2rem] flex h-[1.35rem] w-[1.35rem] shrink-0 items-center justify-center rounded-full bg-[rgba(177,233,198,0.22)] text-[#d7f4e1] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]">
-                        <svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="currentColor">
+                      <span
+                        class="mt-[0.2rem] flex h-[1.35rem] w-[1.35rem] shrink-0 items-center justify-center rounded-full bg-[rgba(177,233,198,0.22)] text-[#d7f4e1] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]"
+                      >
+                        <svg
+                          viewBox="0 0 20 20"
+                          class="h-3.5 w-3.5"
+                          fill="currentColor"
+                        >
                           <path
                             fill-rule="evenodd"
                             d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.25 7.313a1 1 0 0 1-1.42-.002l-3.246-3.29a1 1 0 1 1 1.424-1.406l2.535 2.57 6.537-6.593a1 1 0 0 1 1.414-.006Z"
@@ -808,11 +880,20 @@
                           />
                         </svg>
                       </span>
-                      <span>Admin yang sigap dan siap membantu di setiap tahapan proses.</span>
+                      <span
+                        >Admin yang sigap dan siap membantu di setiap tahapan
+                        proses.</span
+                      >
                     </li>
                     <li class="flex gap-3 text-[0.95rem] leading-[1.6]">
-                      <span class="mt-[0.2rem] flex h-[1.35rem] w-[1.35rem] shrink-0 items-center justify-center rounded-full bg-[rgba(177,233,198,0.22)] text-[#d7f4e1] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]">
-                        <svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="currentColor">
+                      <span
+                        class="mt-[0.2rem] flex h-[1.35rem] w-[1.35rem] shrink-0 items-center justify-center rounded-full bg-[rgba(177,233,198,0.22)] text-[#d7f4e1] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]"
+                      >
+                        <svg
+                          viewBox="0 0 20 20"
+                          class="h-3.5 w-3.5"
+                          fill="currentColor"
+                        >
                           <path
                             fill-rule="evenodd"
                             d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.25 7.313a1 1 0 0 1-1.42-.002l-3.246-3.29a1 1 0 1 1 1.424-1.406l2.535 2.57 6.537-6.593a1 1 0 0 1 1.414-.006Z"
@@ -820,7 +901,10 @@
                           />
                         </svg>
                       </span>
-                      <span>Pendampingan sidang fatwa hingga proses berjalan lebih terarah.</span>
+                      <span
+                        >Pendampingan sidang fatwa hingga proses berjalan lebih
+                        terarah.</span
+                      >
                     </li>
                   </ul>
                 </div>
@@ -828,15 +912,25 @@
             </article>
 
             <article
-              class="reveal translate-y-6 opacity-0 transition duration-700 ease-out relative flex min-h-[620px] overflow-hidden rounded-[2rem] isolate shadow-[0_28px_72px_rgba(10,40,25,0.14)] before:absolute before:inset-0 before:bg-[image:var(--card-image)] before:bg-cover before:bg-center before:scale-[1.04] before:transition-transform before:duration-[900ms] hover:before:scale-110 after:absolute after:inset-0 after:bg-[radial-gradient(circle_at_50%_18%,rgba(177,233,198,0.08)_0%,rgba(177,233,198,0)_28%),linear-gradient(180deg,rgba(12,47,31,0)_0%,rgba(12,47,31,0.16)_24%,rgba(17,74,47,0.52)_42%,rgba(18,94,57,0.9)_60%,rgba(12,47,31,0.98)_78%,rgba(8,33,21,1)_100%),var(--card-overlay)] max-sm:min-h-[520px]"
+              class="reveal relative flex min-h-[520px] overflow-hidden rounded-[2rem] isolate translate-y-6 opacity-0 shadow-[0_28px_72px_rgba(10,40,25,0.14)] transition duration-700 ease-out before:absolute before:inset-0 before:bg-[image:var(--card-image)] before:bg-cover before:bg-center before:scale-[1.04] before:transition-transform before:duration-[900ms] hover:before:scale-110 after:absolute after:inset-0 after:bg-[radial-gradient(circle_at_50%_18%,rgba(177,233,198,0.08)_0%,rgba(177,233,198,0)_28%),linear-gradient(180deg,rgba(12,47,31,0)_0%,rgba(12,47,31,0.16)_24%,rgba(17,74,47,0.52)_42%,rgba(18,94,57,0.9)_60%,rgba(12,47,31,0.98)_78%,rgba(8,33,21,1)_100%),var(--card-overlay)] sm:min-h-[560px] xl:min-h-[620px]"
               style="
-                --card-image: url('./auditor.png');
-                --card-overlay: linear-gradient(180deg, rgba(177, 233, 198, 0) 0%, rgba(22, 119, 70, 0.14) 34%, rgba(18, 94, 57, 0.46) 54%, rgba(12, 47, 31, 0.7) 100%);
+                --card-image: url(&quot;./auditor.png&quot;);
+                --card-overlay: linear-gradient(
+                  180deg,
+                  rgba(177, 233, 198, 0) 0%,
+                  rgba(22, 119, 70, 0.14) 34%,
+                  rgba(18, 94, 57, 0.46) 54%,
+                  rgba(12, 47, 31, 0.7) 100%
+                );
               "
             >
-              <div class="relative z-[1] flex w-full flex-col p-8 text-white max-sm:p-6">
+              <div
+                class="relative z-[1] flex w-full flex-col p-6 text-white sm:p-8"
+              >
                 <div class="flex items-center gap-4">
-                  <div class="flex h-[3.6rem] w-[3.6rem] items-center justify-center rounded-[1.2rem] bg-[rgba(11,41,26,0.32)] text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.18)] backdrop-blur-[14px]">
+                  <div
+                    class="flex h-[3.6rem] w-[3.6rem] items-center justify-center rounded-[1.2rem] bg-[rgba(11,41,26,0.32)] text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.18)] backdrop-blur-[14px]"
+                  >
                     <svg
                       viewBox="0 0 24 24"
                       class="h-7 w-7"
@@ -852,22 +946,35 @@
                       <path d="m10 12 1.5 1.5L14.5 10.5" />
                     </svg>
                   </div>
-                  <span class="text-[0.8rem] font-extrabold uppercase tracking-[0.24em] text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.35)]">AUDIT</span>
+                  <span
+                    class="text-[0.8rem] font-extrabold uppercase tracking-[0.24em] text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.35)]"
+                    >AUDIT</span
+                  >
                 </div>
-                <div class="mt-auto flex min-h-[22rem] max-w-sm flex-col justify-end gap-3 pt-[10.5rem] max-sm:min-h-0 max-sm:pt-32">
-                  <h3 class="min-h-[calc(1.08em*4)] font-display text-3xl font-extrabold leading-[1.08] max-sm:min-h-0">
+                <div
+                  class="mt-auto flex max-w-sm flex-col justify-end gap-3 pt-28 sm:pt-32 lg:pt-36"
+                >
+                  <h3
+                    class="font-display text-[1.75rem] font-extrabold leading-[1.08] sm:text-3xl"
+                  >
                     Auditor berpengalaman dan professional
                   </h3>
-                  <div class="min-h-[5.8rem] max-sm:min-h-0">
+                  <div>
                     <p class="text-sm leading-7 text-slate-100/90">
-                      Bukan sekadar mengecek, tetapi membantu usaha memahami standar
-                      halal sebelum dan sesudah audit berlangsung.
+                      Bukan sekadar mengecek, tetapi membantu usaha memahami
+                      standar halal sebelum dan sesudah audit berlangsung.
                     </p>
                   </div>
                   <ul class="grid gap-[0.65rem] text-slate-100/95">
                     <li class="flex gap-3 text-[0.95rem] leading-[1.6]">
-                      <span class="mt-[0.2rem] flex h-[1.35rem] w-[1.35rem] shrink-0 items-center justify-center rounded-full bg-[rgba(177,233,198,0.22)] text-[#d7f4e1] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]">
-                        <svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="currentColor">
+                      <span
+                        class="mt-[0.2rem] flex h-[1.35rem] w-[1.35rem] shrink-0 items-center justify-center rounded-full bg-[rgba(177,233,198,0.22)] text-[#d7f4e1] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]"
+                      >
+                        <svg
+                          viewBox="0 0 20 20"
+                          class="h-3.5 w-3.5"
+                          fill="currentColor"
+                        >
                           <path
                             fill-rule="evenodd"
                             d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.25 7.313a1 1 0 0 1-1.42-.002l-3.246-3.29a1 1 0 1 1 1.424-1.406l2.535 2.57 6.537-6.593a1 1 0 0 1 1.414-.006Z"
@@ -875,11 +982,20 @@
                           />
                         </svg>
                       </span>
-                      <span>Pendampingan pra-audit untuk memastikan kesiapan usaha Anda.</span>
+                      <span
+                        >Pendampingan pra-audit untuk memastikan kesiapan usaha
+                        Anda.</span
+                      >
                     </li>
                     <li class="flex gap-3 text-[0.95rem] leading-[1.6]">
-                      <span class="mt-[0.2rem] flex h-[1.35rem] w-[1.35rem] shrink-0 items-center justify-center rounded-full bg-[rgba(177,233,198,0.22)] text-[#d7f4e1] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]">
-                        <svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="currentColor">
+                      <span
+                        class="mt-[0.2rem] flex h-[1.35rem] w-[1.35rem] shrink-0 items-center justify-center rounded-full bg-[rgba(177,233,198,0.22)] text-[#d7f4e1] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]"
+                      >
+                        <svg
+                          viewBox="0 0 20 20"
+                          class="h-3.5 w-3.5"
+                          fill="currentColor"
+                        >
                           <path
                             fill-rule="evenodd"
                             d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.25 7.313a1 1 0 0 1-1.42-.002l-3.246-3.29a1 1 0 1 1 1.424-1.406l2.535 2.57 6.537-6.593a1 1 0 0 1 1.414-.006Z"
@@ -887,7 +1003,10 @@
                           />
                         </svg>
                       </span>
-                      <span>Pendampingan pasca-audit agar tindak lanjut lebih jelas dan terarah.</span>
+                      <span
+                        >Pendampingan pasca-audit agar tindak lanjut lebih jelas
+                        dan terarah.</span
+                      >
                     </li>
                   </ul>
                 </div>
@@ -895,15 +1014,25 @@
             </article>
 
             <article
-              class="reveal translate-y-6 opacity-0 transition duration-700 ease-out relative flex min-h-[620px] overflow-hidden rounded-[2rem] isolate shadow-[0_28px_72px_rgba(10,40,25,0.14)] before:absolute before:inset-0 before:bg-[image:var(--card-image)] before:bg-cover before:bg-center before:scale-[1.04] before:transition-transform before:duration-[900ms] hover:before:scale-110 after:absolute after:inset-0 after:bg-[radial-gradient(circle_at_50%_18%,rgba(177,233,198,0.08)_0%,rgba(177,233,198,0)_28%),linear-gradient(180deg,rgba(12,47,31,0)_0%,rgba(12,47,31,0.16)_24%,rgba(17,74,47,0.52)_42%,rgba(18,94,57,0.9)_60%,rgba(12,47,31,0.98)_78%,rgba(8,33,21,1)_100%),var(--card-overlay)] max-sm:min-h-[520px]"
+              class="reveal relative flex min-h-[520px] overflow-hidden rounded-[2rem] isolate translate-y-6 opacity-0 shadow-[0_28px_72px_rgba(10,40,25,0.14)] transition duration-700 ease-out before:absolute before:inset-0 before:bg-[image:var(--card-image)] before:bg-cover before:bg-center before:scale-[1.04] before:transition-transform before:duration-[900ms] hover:before:scale-110 after:absolute after:inset-0 after:bg-[radial-gradient(circle_at_50%_18%,rgba(177,233,198,0.08)_0%,rgba(177,233,198,0)_28%),linear-gradient(180deg,rgba(12,47,31,0)_0%,rgba(12,47,31,0.16)_24%,rgba(17,74,47,0.52)_42%,rgba(18,94,57,0.9)_60%,rgba(12,47,31,0.98)_78%,rgba(8,33,21,1)_100%),var(--card-overlay)] sm:min-h-[560px] xl:min-h-[620px]"
               style="
-                --card-image: url('./lab.png');
-                --card-overlay: linear-gradient(180deg, rgba(127, 215, 162, 0) 0%, rgba(22, 119, 70, 0.18) 36%, rgba(17, 74, 47, 0.5) 56%, rgba(12, 47, 31, 0.74) 100%);
+                --card-image: url(&quot;./lab.png&quot;);
+                --card-overlay: linear-gradient(
+                  180deg,
+                  rgba(127, 215, 162, 0) 0%,
+                  rgba(22, 119, 70, 0.18) 36%,
+                  rgba(17, 74, 47, 0.5) 56%,
+                  rgba(12, 47, 31, 0.74) 100%
+                );
               "
             >
-              <div class="relative z-[1] flex w-full flex-col p-8 text-white max-sm:p-6">
+              <div
+                class="relative z-[1] flex w-full flex-col p-6 text-white sm:p-8"
+              >
                 <div class="flex items-center gap-4">
-                  <div class="flex h-[3.6rem] w-[3.6rem] items-center justify-center rounded-[1.2rem] bg-[rgba(11,41,26,0.32)] text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.18)] backdrop-blur-[14px]">
+                  <div
+                    class="flex h-[3.6rem] w-[3.6rem] items-center justify-center rounded-[1.2rem] bg-[rgba(11,41,26,0.32)] text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.18)] backdrop-blur-[14px]"
+                  >
                     <svg
                       viewBox="0 0 24 24"
                       class="h-7 w-7"
@@ -920,21 +1049,36 @@
                       <path d="M9 17h6" />
                     </svg>
                   </div>
-                  <span class="text-[0.8rem] font-extrabold uppercase tracking-[0.24em] text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.35)]">LABORATORIUM</span>
+                  <span
+                    class="text-[0.8rem] font-extrabold uppercase tracking-[0.24em] text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.35)]"
+                    >LABORATORIUM</span
+                  >
                 </div>
-                <div class="mt-auto flex min-h-[22rem] max-w-sm flex-col justify-end gap-3 pt-[10.5rem] max-sm:min-h-0 max-sm:pt-32">
-                  <h3 class="min-h-[calc(1.08em*3)] font-display text-3xl font-extrabold leading-[1.08] max-sm:min-h-0">
+                <div
+                  class="mt-auto flex max-w-sm flex-col justify-end gap-3 pt-28 sm:pt-32 lg:pt-36"
+                >
+                  <h3
+                    class="font-display text-[1.75rem] font-extrabold leading-[1.08] sm:text-3xl"
+                  >
                     LPPOM Memiliki Laboratorium Halal
                   </h3>
-                  <div class="min-h-[5.8rem] max-sm:min-h-0">
+                  <div>
                     <p class="text-sm leading-7 text-slate-100/90">
-                      LPPOM mempunyai layanan laboratorium halal sendiri, sehingga proses sertifikasi halal lebih mudah, cepat, dan pelayanan satu atap.
+                      LPPOM mempunyai layanan laboratorium halal sendiri,
+                      sehingga proses sertifikasi halal lebih mudah, cepat, dan
+                      pelayanan satu atap.
                     </p>
                   </div>
                   <ul class="grid gap-[0.65rem] text-slate-100/95">
                     <li class="flex gap-3 text-[0.95rem] leading-[1.6]">
-                      <span class="mt-[0.2rem] flex h-[1.35rem] w-[1.35rem] shrink-0 items-center justify-center rounded-full bg-[rgba(177,233,198,0.22)] text-[#d7f4e1] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]">
-                        <svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="currentColor">
+                      <span
+                        class="mt-[0.2rem] flex h-[1.35rem] w-[1.35rem] shrink-0 items-center justify-center rounded-full bg-[rgba(177,233,198,0.22)] text-[#d7f4e1] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]"
+                      >
+                        <svg
+                          viewBox="0 0 20 20"
+                          class="h-3.5 w-3.5"
+                          fill="currentColor"
+                        >
                           <path
                             fill-rule="evenodd"
                             d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.25 7.313a1 1 0 0 1-1.42-.002l-3.246-3.29a1 1 0 1 1 1.424-1.406l2.535 2.57 6.537-6.593a1 1 0 0 1 1.414-.006Z"
@@ -942,11 +1086,20 @@
                           />
                         </svg>
                       </span>
-                      <span>Pendampingan pemeriksaan laboratorium bila dibutuhkan dalam proses sertifikasi.</span>
+                      <span
+                        >Pendampingan pemeriksaan laboratorium bila dibutuhkan
+                        dalam proses sertifikasi.</span
+                      >
                     </li>
                     <li class="flex gap-3 text-[0.95rem] leading-[1.6]">
-                      <span class="mt-[0.2rem] flex h-[1.35rem] w-[1.35rem] shrink-0 items-center justify-center rounded-full bg-[rgba(177,233,198,0.22)] text-[#d7f4e1] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]">
-                        <svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="currentColor">
+                      <span
+                        class="mt-[0.2rem] flex h-[1.35rem] w-[1.35rem] shrink-0 items-center justify-center rounded-full bg-[rgba(177,233,198,0.22)] text-[#d7f4e1] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]"
+                      >
+                        <svg
+                          viewBox="0 0 20 20"
+                          class="h-3.5 w-3.5"
+                          fill="currentColor"
+                        >
                           <path
                             fill-rule="evenodd"
                             d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.25 7.313a1 1 0 0 1-1.42-.002l-3.246-3.29a1 1 0 1 1 1.424-1.406l2.535 2.57 6.537-6.593a1 1 0 0 1 1.414-.006Z"
@@ -954,7 +1107,10 @@
                           />
                         </svg>
                       </span>
-                      <span>Laboratorium LPPOM telah memperoleh rekognisi regulatory-grade dari BPOM pada 2026.</span>
+                      <span
+                        >Laboratorium LPPOM telah memperoleh rekognisi
+                        regulatory-grade dari BPOM pada 2026.</span
+                      >
                     </li>
                   </ul>
                 </div>
@@ -1108,14 +1264,13 @@
           </div>
         </section> -->
 
-        
-        <section class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <section id="partnership" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div class="grid gap-10 lg:grid-cols-[1.02fr_.98fr] lg:items-center">
             <div class="reveal">
               <p
-                class="text-md font-bold uppercase tracking-[0.24em] text-brand-600"
+                class="text-md font-semibold uppercase tracking-[0.24em] text-brand-600"
               >
-                Open Partnership  - Bergabunglah Dengan Mitra Halal LPPOM
+                Open Partnership - <b class="font-extrabold">Bergabunglah Dengan Mitra Halal LPPOM</b>
               </p>
               <h2
                 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-brand-900 md:text-4xl"
@@ -1123,11 +1278,15 @@
                 Kuasai Pasar Halal Global bersama LPPOM Jakarta!
               </h2>
               <p class="mt-4 text-base leading-7 text-slate-600">
-                37 tahun LPPOM sebagai Lembaga Pemeriksa Halal yang berpengalaman, profesional, resmi dan cepat. Saatnya Anda menjadi bagian dalam ekosistem Halal yang telah diakui dunia. LPPOM Jakarta membuka kolaborasi bagi individu, komunitas, dan
+                37 tahun LPPOM sebagai Lembaga Pemeriksa Halal yang
+                berpengalaman, profesional, resmi dan cepat. Saatnya Anda
+                menjadi bagian dalam ekosistem Halal yang telah diakui dunia.
+                LPPOM Jakarta membuka kolaborasi bagi individu, komunitas, dan
                 lembaga untuk menjadi Mitra Halal dan bertumbuh bersama.
               </p>
               <p class="mt-4 text-base leading-7 text-slate-600">
-                Raih peluang keuntungan dan manfaat besar dari pesatnya perkembangan industri halal.
+                Raih peluang keuntungan dan manfaat besar dari pesatnya
+                perkembangan industri halal.
               </p>
               <a
                 href="https://wa.me/628139516822?text=Halo%20LPPOM%20Jakarta%2C%20saya%20tertarik%20open%20partnership%20Mitra%20Halal."
@@ -1136,8 +1295,19 @@
                 Buka Diskusi Partnership
               </a>
             </div>
-            <div class="grid gap-5 sm:grid-cols-2">
-              <div class="reveal translate-y-6 rounded-[1.75rem] border border-[rgba(219,239,227,0.95)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(249,252,250,0.94))] p-6 opacity-0 shadow-[0_18px_50px_rgba(11,41,26,0.08)] transition duration-700 ease-out">
+            <!-- <div class="grid gap-5 sm:grid-cols-2"> -->
+            <div
+              class="origin-bottom-left overflow-hidden rounded-[2rem] border border-white/80 bg-[radial-gradient(circle_at_30%_25%,rgba(177,233,198,0.85),transparent_38%),radial-gradient(circle_at_72%_20%,rgba(255,255,255,0.96),rgba(255,255,255,0.72)_48%,transparent_72%),linear-gradient(180deg,#f4fbf6_0%,#ffffff_100%)] shadow-[0_30px_70px_rgba(41,34,24,0.14)] transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:rotate-0 group-hover:shadow-[0_38px_85px_rgba(41,34,24,0.18)] bg-brand-400"
+            >
+            <img
+              src="./partnership2.jpeg"
+              alt="Partnership"
+              class="h-full w-full scale-[1.01] object-contain object-bottom drop-shadow-[0_28px_44px_rgba(19,74,47,0.18)] transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+            />
+              <!-- <div class="relative aspect-[1/1.04] w-full overflow-hidden">
+              </div> -->
+              <!-- </div> -->
+              <!-- <div class="reveal translate-y-6 rounded-[1.75rem] border border-[rgba(219,239,227,0.95)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(249,252,250,0.94))] p-6 opacity-0 shadow-[0_18px_50px_rgba(11,41,26,0.08)] transition duration-700 ease-out">
                 <div
                   class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-50 text-brand-700"
                 >
@@ -1241,7 +1411,7 @@
                   Memperluas jaringan sekaligus meningkatkan profesionalitas di
                   bidang halal.
                 </p>
-              </div>
+              </div> -->
             </div>
           </div>
         </section>
@@ -1362,11 +1532,9 @@
                             d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.25 7.313a1 1 0 0 1-1.42-.002l-3.246-3.29a1 1 0 1 1 1.424-1.406l2.535 2.57 6.537-6.593a1 1 0 0 1 1.414-.006Z"
                             clip-rule="evenodd"
                           />
-                        </svg>  
+                        </svg>
                       </span>
-                      <span
-                        >Meningkatkan Kepercayaan Konsumen.</span
-                      >
+                      <span>Meningkatkan Kepercayaan Konsumen.</span>
                     </li>
                     <li class="flex gap-3">
                       <span
@@ -1384,9 +1552,7 @@
                           />
                         </svg>
                       </span>
-                      <span
-                        >Jaminan Kualitas Produk.</span
-                      >
+                      <span>Jaminan Kualitas Produk.</span>
                     </li>
                     <li class="flex gap-3">
                       <span
@@ -1404,9 +1570,7 @@
                           />
                         </svg>
                       </span>
-                      <span
-                        >Meningkatkan Daya Saing.</span
-                      >
+                      <span>Meningkatkan Daya Saing.</span>
                     </li>
                     <li class="flex gap-3">
                       <span
@@ -1424,9 +1588,7 @@
                           />
                         </svg>
                       </span>
-                      <span
-                        >Lebih Berani Berekspansi Bisnis.</span
-                      >
+                      <span>Lebih Berani Berekspansi Bisnis.</span>
                     </li>
                     <li class="flex gap-3">
                       <span
@@ -1444,9 +1606,7 @@
                           />
                         </svg>
                       </span>
-                      <span
-                        >Patuh Terhadap Regulasi Pemerintah.</span
-                      >
+                      <span>Patuh Terhadap Regulasi Pemerintah.</span>
                     </li>
                   </ul>
                   <a
@@ -1462,7 +1622,9 @@
         </section>
 
         <section class="mx-auto max-w-7xl px-6 pb-20 lg:px-8">
-          <div class="reveal translate-y-6 opacity-0 transition duration-700 ease-out text-center">
+          <div
+            class="reveal translate-y-6 opacity-0 transition duration-700 ease-out text-center"
+          >
             <p
               class="text-sm font-bold uppercase tracking-[0.24em] text-brand-600"
             >
@@ -1476,7 +1638,10 @@
           </div>
 
           <div class="relative mt-10 overflow-hidden">
-            <div class="flex w-max gap-6 animate-[marquee-left_38s_linear_infinite] hover:[animation-play-state:paused]">
+            <div
+              data-marquee-id="testimonials-row"
+              class="flex w-max gap-6 animate-[marquee-left_38s_linear_infinite] hover:[animation-play-state:paused]"
+            >
               <article
                 class="reveal translate-y-6 w-[min(320px,calc(100vw-3.5rem))] shrink-0 rounded-[1.75rem] border border-[rgba(219,239,227,0.95)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(249,252,250,0.94))] p-6 text-center opacity-0 shadow-[0_18px_50px_rgba(11,41,26,0.08)] transition duration-700 ease-out"
               >
@@ -1509,7 +1674,9 @@
                     class="max-h-[120px] w-auto max-w-full object-contain"
                   />
                 </div>
-                <p class="mt-6 text-2xl font-extrabold text-brand-900">Mie Ami Nikita Mirzani</p>
+                <p class="mt-6 text-2xl font-extrabold text-brand-900">
+                  Mie Ami Nikita Mirzani
+                </p>
                 <p class="mt-4 text-base leading-8 text-slate-700">
                   "Pendampingannya membantu kami lebih percaya diri karena
                   setiap tahap dijelaskan dengan rapi."
@@ -1613,7 +1780,7 @@
                   yang harus disiapkan dari awal."
                 </p>
               </article>
-                            <article
+              <article
                 class="reveal translate-y-6 w-[min(320px,calc(100vw-3.5rem))] shrink-0 rounded-[1.75rem] border border-[rgba(219,239,227,0.95)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(249,252,250,0.94))] p-6 text-center opacity-0 shadow-[0_18px_50px_rgba(11,41,26,0.08)] transition duration-700 ease-out"
               >
                 <div
@@ -1716,7 +1883,9 @@
         </section>
 
         <section id="faq" class="mx-auto max-w-5xl px-6 pb-16 lg:px-8">
-          <div class="reveal translate-y-6 opacity-0 transition duration-700 ease-out text-center">
+          <div
+            class="reveal translate-y-6 opacity-0 transition duration-700 ease-out text-center"
+          >
             <p
               class="text-sm font-bold uppercase tracking-[0.24em] text-brand-600"
             >
@@ -1883,5 +2052,3 @@
     <script src="./app.js"></script>
   </body>
 </html>
-
-
