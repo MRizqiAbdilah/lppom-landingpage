@@ -197,6 +197,9 @@ if (galleryItems.length > 0 && galleryLightbox) {
   const galleryLightboxImage = galleryLightbox.querySelector(
     "[data-gallery-lightbox-image]",
   );
+  const galleryLightboxCaption = galleryLightbox.querySelector(
+    "[data-gallery-lightbox-caption]",
+  );
   const galleryClose = galleryLightbox.querySelector("[data-gallery-close]");
   const galleryPrev = galleryLightbox.querySelector(
     "[data-gallery-lightbox-prev]",
@@ -214,6 +217,12 @@ if (galleryItems.length > 0 && galleryLightbox) {
 
     galleryLightboxImage.src = activeItem.dataset.gallerySrc || image.src;
     galleryLightboxImage.alt = image.alt || "Preview galeri pelaku usaha";
+    if (galleryLightboxCaption) {
+      galleryLightboxCaption.textContent =
+        activeItem.dataset.galleryTitle ||
+        image.alt ||
+        "Galeri pelaku usaha";
+    }
   };
 
   const openLightbox = (index) => {
